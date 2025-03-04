@@ -1,0 +1,21 @@
+<mvc:View controllerName="sample.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:l="sap.ui.layout"
+	xmlns:u="sap.ui.unified"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content >
+        <l:VerticalLayout id="_IDGenVerticalLayout1">
+		<u:FileUploader beforeUploadStarts="onchange"
+			id="fileUploader"
+			name="myFileUpload"
+			uploadUrl="upload/"
+             change="onFileChange"
+			tooltip="Upload your file to the local server"
+			uploadComplete="handleUploadComplete"/>
+		<Button id="_IDGenButton"
+			text="Upload File"
+			press="handleUploadPress"/>
+	</l:VerticalLayout>
+    </content >
+    </Page>
+</mvc:View>
